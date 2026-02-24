@@ -1,0 +1,11 @@
+extends Control
+
+func _on_play_button_pressed():
+	# Заменяем "res://levels/level_01.tscn" на путь к твоей сцене с игрой
+	get_tree().change_scene_to_file("")
+
+func _on_settings_button_pressed():
+	print("Открываем настройки...") # Здесь позже будет вызов меню настроек
+
+func _on_exit_button_pressed():
+	get_tree().quit() # Закрывает игру

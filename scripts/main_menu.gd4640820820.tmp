@@ -1,0 +1,35 @@
+extends Control
+
+#Играть
+func _on_play_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed play")
+	get_tree().change_scene_to_file("")
+
+#Продолжить
+func _on_resume_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed resume")
+	get_tree().change_scene_to_file("")
+
+#Онлайн
+func _on_online_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed online")
+	get_tree().change_scene_to_file("")
+
+#Достижения
+func _on_achievements_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed achivments")
+
+#Настройки
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed settings")
+
+#Выход
+func _on_exit_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed exit")
+	get_tree().quit()

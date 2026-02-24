@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dfh73qj58e0ff"]
+
+[ext_resource type="Script" uid="uid://qkpf04606w4u" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="AudioStream" uid="uid://x5jvoti6faix" path="res://assets/audio/soundtrack/mainmenu.ogg" id="2_ekxnf"]
+
+[node name="Main_Menu" type="Control" unique_id=68692691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="BackGrownsdMusic" type="AudioStreamPlayer" parent="." unique_id=642741392]
+stream = ExtResource("2_ekxnf")
+volume_db = -5.035
+autoplay = true
+parameters/looping = true
+
+[node name="main" type="VBoxContainer" parent="." unique_id=1073841522]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.326
+anchor_right = 0.21700001
+anchor_bottom = 0.89400005
+offset_left = -0.3199997
+offset_top = -0.2480011
+offset_right = 0.015991211
+offset_bottom = -0.31201172
+theme_override_constants/separation = 10
+
+[node name="play" type="Button" parent="main" unique_id=773960717]
+layout_mode = 2
+text = "Играть"
+
+[node name="resume" type="Button" parent="main" unique_id=702905446]
+layout_mode = 2
+text = "Продолжить"
+
+[node name="online" type="Button" parent="main" unique_id=759409736]
+layout_mode = 2
+text = "Онлайн"
+
+[node name="achievements" type="Button" parent="main" unique_id=563278535]
+layout_mode = 2
+text = "Достижения"
+
+[node name="settings" type="Button" parent="main" unique_id=137914111]
+layout_mode = 2
+text = "Настройки"
+
+[node name="exit" type="Button" parent="main" unique_id=1557847802]
+layout_mode = 2
+text = "Выход"
+
+[node name="discord" type="LinkButton" parent="." unique_id=229650731]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 600.0
+offset_right = 148.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+text = "Discord"
+underline = 1
+uri = "https://discord.gg/jHAM4kecsk"
+
+[node name="telegram" type="LinkButton" parent="." unique_id=96093528]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 600.0
+offset_right = 343.0
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+text = "Telegram"
+underline = 1
+uri = "https://t.me/+k-Oj605X7rU2Y2Ey"
+
+[node name="wedsite" type="LinkButton" parent="." unique_id=1954373106]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 600.0
+offset_right = 553.6667
+offset_bottom = 627.3334
+scale = Vector2(1.5, 1.5)
+text = "WebSite"
+underline = 1
+
+[node name="settingslayer" type="CanvasLayer" parent="." unique_id=731231290]
+layer = 2
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="settingslayer" unique_id=2007582795]
+clip_contents = true
+custom_minimum_size = Vector2(500, 400)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="x" type="Button" parent="settingslayer" unique_id=1684747082]
+offset_left = 1089.0
+offset_top = 12.0
+offset_right = 1139.0
+offset_bottom = 62.0
+text = "X"
+
+[node name="naviwgationsmenu" type="VBoxContainer" parent="settingslayer" unique_id=439206771]
+offset_left = 39.0
+offset_top = 111.0
+offset_right = 300.0
+offset_bottom = 513.0
+
+[node name="Button" type="Button" parent="settingslayer/naviwgationsmenu" unique_id=1707487312]
+layout_mode = 2
+text = "Основные настройки"
+
+[node name="main" type="CanvasLayer" parent="settingslayer" unique_id=827227518]
+layer = 3
+visible = false
+
+[node name="volme" type="HSlider" parent="settingslayer/main" unique_id=1581490924]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 652.0
+offset_top = 105.0
+offset_right = 860.0
+offset_bottom = 155.0
+size_flags_horizontal = 8
+value = 100.0
+
+[node name="Label" type="Label" parent="settingslayer/main" unique_id=598102803]
+anchors_preset = -1
+anchor_left = 0.36900002
+anchor_top = 0.157
+anchor_right = 0.55600005
+anchor_bottom = 0.238
+offset_left = -0.088012695
+offset_top = 0.26399994
+offset_right = -107.512085
+offset_bottom = -26.223999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "Громкость"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[connection signal="pressed" from="main/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="main/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="main/online" to="." method="_on_online_pressed"]
+[connection signal="pressed" from="main/achievements" to="." method="_on_achievements_pressed"]
+[connection signal="pressed" from="main/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="main/exit" to="." method="_on_exit_pressed"]
+[connection signal="visibility_changed" from="settingslayer" to="." method="_on_settingslayer_visibility_changed"]

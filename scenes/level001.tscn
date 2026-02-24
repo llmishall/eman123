@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hm6wwir8qb06"]
+
+[node name="Node2D" type="Node2D" unique_id=743853341]
+
+[node name="Label" type="Label" parent="." unique_id=969869371]
+offset_left = 504.0
+offset_top = 229.0
+offset_right = 544.0
+offset_bottom = 252.0
+text = "Сегодня всё начнётся"

@@ -1,0 +1,31 @@
+extends Control
+
+#Играть
+func _on_play_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed play")
+
+#Продолжить
+func _on_resume_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed resume")
+
+#Онлайн
+func _on_online_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed online")
+
+#Достижения
+func _on_achievements_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed achivments")
+
+#Настройки
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed settings")
+
+#Выход
+func _on_exit_pressed() -> void:
+	pass # Replace with function body.
+	print("pressed exit")
